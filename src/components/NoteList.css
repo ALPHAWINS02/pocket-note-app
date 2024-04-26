@@ -1,0 +1,150 @@
+.note-list {
+    width: 75%;
+    height: 100vh;
+    background-color: #DAE5F5;
+    /* overflow-y: auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    /* justify-content: space-between; */
+    /* justify-content: space-between; */
+}
+
+@media (max-width: 1024px) {
+    .note-list {
+        width: 70%;
+    }
+}
+
+@media (max-width: 640px) {
+    .note-list {
+        width: 100%;
+    }
+}
+
+
+.notes-heading {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #001F8B;
+    padding: 1rem;
+    position: sticky;
+}
+
+.group-icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    background-color: #ccc;
+    margin-left: 10px;
+}
+
+.note-heading-text {
+    color: white;
+}
+
+.input-container {
+    background-color: #001F8B;
+    padding: 20px 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-area {
+    width: 95%;
+    height: 100px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    color: black;
+    resize: none;
+    border-radius: 8px;
+    text-wrap: wrap;
+}
+
+.send-icon {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+@media (max-width: 640px) {
+    .send-icon {
+        right: 20px;
+    }
+}
+
+.send-icon:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.note-list-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: scroll;
+    margin: 15px 0;
+    flex-flow: wrap;
+    flex-grow: 1;
+}
+
+.note-item {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: max-content;
+    background-color: #fff;
+    padding: 5px 15px;
+    margin-bottom: 10px !important;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+.note-item p {
+    line-height: 25px;
+}
+
+.note-time {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 15px;
+}
+
+.note-time img {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.back-arrow {
+    position: relative;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    top: 3px;
+}
